@@ -2,6 +2,7 @@
 
 > **Status:** concept-only research direction.  
 > **Horizon:** post-Endophasia / post-Magpie.  
+> **License:** [MIT](LICENSE).  
 > **No implementation yet.**
 
 ## Question
