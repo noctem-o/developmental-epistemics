@@ -33,6 +33,21 @@ So the interesting question is not whether an "epistemic childhood" sounds appea
 
 It is whether **timing contributes anything once content, metadata and later training pressure are controlled**.
 
+### Developmental ordering may itself be measurable
+
+A complementary result concerns **when capabilities emerge**, rather than whether an alignment intervention survives later training.
+
+- Emmy Liu, Kaiser Sun, Millicent Li, Isabelle Lee, Lindia Tjuatja, Jen-tse Huang and Graham Neubig, [*What Do Language Models Learn and When? The Implicit Curriculum Hypothesis*](https://arxiv.org/abs/2604.08510), find a surprisingly stable fixed-threshold emergence ordering across nine models from four families (mean Spearman \(\rho=.81\) across 45 model pairs). Composite tasks usually emerge after their constructed components, and task representations can predict held-out composite learning trajectories (reported \(R^2=.68\)–\(.84\) across models).
+
+This does **not** show that deliberately changing a curriculum causes more durable epistemic behaviour. It does suggest that developmental state can be operationalised at finer resolution than training step or token count alone.
+
+The authors released useful open measurement artifacts:
+
+- [ElementalTask](https://github.com/KaiserWhoLearns/ElementalTask) — task, checkpoint-evaluation and function-vector tooling; [MIT licensed](https://github.com/KaiserWhoLearns/ElementalTask/blob/main/LICENSE).
+- [elemental-tasks/model-trajectories](https://huggingface.co/datasets/elemental-tasks/model-trajectories) — public checkpoint-level trajectory data; MIT licensed.
+
+These are best treated as possible **measurement baselines**, not as evidence for the developmental-epistemics hypothesis itself. A later study could ask whether a curriculum policy informed by measured developmental state outperforms matched random, uniform or human-specified curricula while preserving the causal controls above.
+
 ## Conceptual design
 
 A future study could use small synthetic microworlds with exact hidden truth and controlled source structure.
