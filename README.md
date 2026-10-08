@@ -49,6 +49,18 @@ The authors released useful open measurement artifacts:
 
 These are best treated as possible **measurement baselines**, not as evidence for the developmental-epistemics hypothesis itself. A later study could ask whether a curriculum policy informed by measured developmental state outperforms matched random, uniform or human-specified curricula while preserving the causal controls above.
 
+## Related work: epistemic representation and verifiable oversight
+
+Two complementary research directions from [LawZero](https://lawzero.org/en), the nonprofit AI safety institute founded by Yoshua Bengio, are especially relevant:
+
+**Epistemic contextualization.** LawZero's [Scientist AI proposal](https://lawzero.org/en/publication/scientist-ai-safe-design-not-desiring) distinguishes claims about the world from *communication acts* in which someone asserts a claim. Its accompanying [formal safety argument](https://arxiv.org/abs/2606.29657) considers a predictor trained toward an epistemic posterior while excluding reward feedback based on the downstream consequences of its predictions. This is a closely related motivation for representing attribution and uncertainty within the learning problem, rather than relying solely on post-training instructions. The proposed safety guarantees depend on assumptions; they are not an empirical demonstration of a generally safe predictor.
+
+**Execution-grounded oversight.** [PyINE](https://github.com/lawzero-org/pyine) ([paper](https://arxiv.org/abs/2610.04737)) is a public experimental framework using instrumented Python programs, deterministic execution traces, mechanically generated variants and verifiable intermediate facts. Its shortcut-following model organisms and oversight evaluations are useful precedents for distinguishing apparently plausible reasoning from execution-grounded correctness.
+
+These projects ask **different questions** from developmental-epistemics. Scientist AI primarily investigates the representation and training objective of a *non-agentic, consequence-invariant predictor*; PyINE investigates eliciting and detecting reasoning failures. Neither establishes that **earlier epistemic learning produces more durable behaviour under later conflicting optimisation**. Indeed, this study deliberately applies downstream pressure that Scientist AI's predictor training seeks to exclude.
+
+A future comparison might separate **what epistemic structure is learned**, **how it is represented** and **when it is introduced**, without conflating those experimental variables. No LawZero code or training objective is adopted by this concept-only project.
+
 ## Conceptual design
 
 A future study could use small synthetic microworlds with exact hidden truth and controlled source structure.
